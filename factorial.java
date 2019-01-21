@@ -2,6 +2,7 @@ import java.util.Random;
 
 public class factorial {
     public static int fact(int n) {
+    	//assuming n is positive int
     	if(n == 0) {
 		return 1;
     	}else {
