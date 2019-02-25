@@ -11,4 +11,4 @@ def find3k(arr,k):
     return False
 
     
-find3k([20,303,3,4,25],49)
+print(find3k([20,303,3,4,25,1],8))
