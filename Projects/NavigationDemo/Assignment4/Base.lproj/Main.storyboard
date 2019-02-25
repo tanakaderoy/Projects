@@ -52,7 +52,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="165" id="JKV-mQ-nmr" customClass="ItemTableViewCell" customModule="Assignment4">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="165" id="JKV-mQ-nmr" customClass="ItemTableViewCell" customModule="Assignment4">
                                 <rect key="frame" x="0.0" y="28" width="414" height="165"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JKV-mQ-nmr" id="cej-km-X1x">
@@ -103,7 +103,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="descriptionItem" destination="fKr-Rm-4Pi" id="qmQ-8q-AsB"/>
+                                    <outlet property="labelDescription" destination="fKr-Rm-4Pi" id="pXz-8G-viJ"/>
                                     <outlet property="labelDueDate" destination="ewb-ZR-za2" id="w3j-vQ-0jN"/>
                                     <outlet property="labelEmoji" destination="QXR-YH-VaD" id="sXw-oZ-fE8"/>
                                     <outlet property="labelPriority" destination="Tte-O0-sIG" id="p8W-kd-oNS"/>

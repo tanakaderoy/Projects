@@ -35,10 +35,10 @@ class ListTableViewController: UITableViewController {
         if let todoItem = TodoItemManager.instance.todoItemAtIndex(indexPath.row){
             cell.labelDescription.text = todoItem.description
             cell.labelEmoji.text = todoItem.emoji
-            cell.labelPriority.text = "\(todoItem.priority)"
+            cell.labelPriority.text = "Priority: \(todoItem.priority)"
             cell.labelState.text = "\(todoItem.state)"
         }else{
-            cell.textLabel?.text = "\(indexPath.row)"
+            
         }
        
         return cell
