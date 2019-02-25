@@ -24,13 +24,22 @@ class ListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warni5g Incomplete implementation, return the number of rows
-        return 5
+        return TodoItemManager.instance.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "\(indexPath.row)"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell") as? ItemTableViewCell else{
+            preconditionFailure("Failed find cell. Check ids")
+        }
+        if let todoItem = TodoItemManager.instance.todoItemAtIndex(indexPath.row){
+            cell.labelDescription.text = todoItem.description
+            cell.labelEmoji.text = todoItem.emoji
+            cell.labelPriority.text = "\(todoItem.priority)"
+            cell.labelState.text = "\(todoItem.state)"
+        }else{
+            cell.textLabel?.text = "\(indexPath.row)"
+        }
        
         return cell
     }
